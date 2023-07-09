@@ -40,6 +40,13 @@
   border: 1px solid black;
 }
 
+.divider {
+  display: inline-block;
+  margin: 10px;
+  width: 3px;
+  height: 50px;
+  background: black;
+}
 
 .peg-red {
   background-color: red;
