@@ -1,0 +1,78 @@
+
+
+.row {
+  display: inline;
+  width: 100%
+}
+
+.control-container {
+  display: inline-block;
+  width: 220px;
+  height: 150px;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 0px;
+}
+
+.control-color {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 30%;
+}
+
+.peg {
+  display: inline-block;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 30%;
+}
+
+.peg-small {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+
+.peg-red {
+  background-color: red;
+}
+
+.peg-orange {
+  background-color: orange;
+}
+
+.peg-yellow {
+  background-color: yellow;
+}
+
+.peg-green {
+  background-color: green;
+}
+
+.peg-blue {
+  background-color: blue;
+}
+
+.peg-purple {
+  background-color: purple;
+}
+
+.peg-black {
+  background-color: black;
+}
+
+.peg-white {
+  background-color: white;
+}
+
+.peg-gray {
+  background-color: gray;
+}

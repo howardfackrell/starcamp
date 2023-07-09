@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="./mastermind.css">
+</head>
+<body>
+<h1>Are you a MasterMind?</h1>
+<h2 id="instructions">Click the colors & Check Answer to play</h2>
+
+<div class="row">
+    <div class="control-container">
+        <div class="control-color peg-red" onclick="appendPegToGuess('red')"></div>
+        <div class="control-color peg-orange" onclick="appendPegToGuess('orange')"></div>
+        <div class="control-color peg-yellow" onclick="appendPegToGuess('yellow')"></div>
+        <div class="control-color peg-green" onclick="appendPegToGuess('green')"></div>
+        <div class="control-color peg-blue" onclick="appendPegToGuess('blue')"></div>
+        <div class="control-color peg-purple" onclick="appendPegToGuess('purple')"></div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="peg guess"></div>
+    <div class="peg guess"></div>
+    <div class="peg guess"></div>
+    <div class="peg guess"></div>
+</div>
+
+<div class="buttons">
+    <button onclick="undoPegGuess()">Undo</button>
+    <button onclick="check()">Check Answer</button>
+</div>
+<hr>
+
+<div class="history">
+    <div data-attempt="0">
+        <div data-guess-history-id="00" class="peg peg-small"></div>
+        <div data-guess-history-id="01" class="peg peg-small"></div>
+        <div data-guess-history-id="02" class="peg peg-small"></div>
+        <div data-guess-history-id="03" class="peg peg-small"></div>
+
+        <div data-result-history-id="00" class="peg peg-small"></div>
+        <div data-result-history-id="01" class="peg peg-small"></div>
+        <div data-result-history-id="02" class="peg peg-small"></div>
+        <div data-result-history-id="03" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="1">
+        <div data-guess-history-id="10" class="peg peg-small"></div>
+        <div data-guess-history-id="11" class="peg peg-small"></div>
+        <div data-guess-history-id="12" class="peg peg-small"></div>
+        <div data-guess-history-id="13" class="peg peg-small"></div>
+
+        <div data-result-history-id="10" class="peg peg-small"></div>
+        <div data-result-history-id="11" class="peg peg-small"></div>
+        <div data-result-history-id="12" class="peg peg-small"></div>
+        <div data-result-history-id="13" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="2">
+        <div data-guess-history-id="20" class="peg peg-small"></div>
+        <div data-guess-history-id="21" class="peg peg-small"></div>
+        <div data-guess-history-id="22" class="peg peg-small"></div>
+        <div data-guess-history-id="23" class="peg peg-small"></div>
+
+        <div data-result-history-id="20" class="peg peg-small"></div>
+        <div data-result-history-id="21" class="peg peg-small"></div>
+        <div data-result-history-id="22" class="peg peg-small"></div>
+        <div data-result-history-id="23" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="3">
+        <div data-guess-history-id="30" class="peg peg-small"></div>
+        <div data-guess-history-id="31" class="peg peg-small"></div>
+        <div data-guess-history-id="32" class="peg peg-small"></div>
+        <div data-guess-history-id="33" class="peg peg-small"></div>
+
+        <div data-result-history-id="30" class="peg peg-small"></div>
+        <div data-result-history-id="31" class="peg peg-small"></div>
+        <div data-result-history-id="32" class="peg peg-small"></div>
+        <div data-result-history-id="33" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="4">
+        <div data-guess-history-id="40" class="peg peg-small"></div>
+        <div data-guess-history-id="41" class="peg peg-small"></div>
+        <div data-guess-history-id="42" class="peg peg-small"></div>
+        <div data-guess-history-id="43" class="peg peg-small"></div>
+
+        <div data-result-history-id="40" class="peg peg-small"></div>
+        <div data-result-history-id="41" class="peg peg-small"></div>
+        <div data-result-history-id="42" class="peg peg-small"></div>
+        <div data-result-history-id="43" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="5">
+        <div data-guess-history-id="50" class="peg peg-small"></div>
+        <div data-guess-history-id="51" class="peg peg-small"></div>
+        <div data-guess-history-id="52" class="peg peg-small"></div>
+        <div data-guess-history-id="53" class="peg peg-small"></div>
+
+        <div data-result-history-id="50" class="peg peg-small"></div>
+        <div data-result-history-id="51" class="peg peg-small"></div>
+        <div data-result-history-id="52" class="peg peg-small"></div>
+        <div data-result-history-id="53" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="6">
+        <div data-guess-history-id="60" class="peg peg-small"></div>
+        <div data-guess-history-id="61" class="peg peg-small"></div>
+        <div data-guess-history-id="62" class="peg peg-small"></div>
+        <div data-guess-history-id="63" class="peg peg-small"></div>
+
+        <div data-result-history-id="60" class="peg peg-small"></div>
+        <div data-result-history-id="61" class="peg peg-small"></div>
+        <div data-result-history-id="62" class="peg peg-small"></div>
+        <div data-result-history-id="63" class="peg peg-small"></div>
+    </div>
+    <div data-attempt="7">
+        <div data-guess-history-id="70" class="peg peg-small"></div>
+        <div data-guess-history-id="71" class="peg peg-small"></div>
+        <div data-guess-history-id="72" class="peg peg-small"></div>
+        <div data-guess-history-id="73" class="peg peg-small"></div>
+
+        <div data-result-history-id="70" class="peg peg-small"></div>
+        <div data-result-history-id="71" class="peg peg-small"></div>
+        <div data-result-history-id="72" class="peg peg-small"></div>
+        <div data-result-history-id="73" class="peg peg-small"></div>
+    </div>
+</div>
+
+<script src="./mastermind.js"></script>
+</body>
+</html>
