@@ -33,3 +33,6 @@ to start the server run
 npx http-server -c-1 ./mastermind
 ```
 
+## Vandalize a website ;)
+https://www.douglassciencecenter.org/
+
