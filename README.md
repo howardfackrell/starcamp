@@ -12,11 +12,20 @@ https://jsfiddle.net/
 demo in browser
 ```text
 numbers
+variables
 math
 strings
+arrays
 functions
 for loops
 ```
+
+## Formulas 
+to start the server run
+```shell
+npx http-server -c-1 ./formulas
+```
+
 
 ## MasterMind Game
 to start the server run
